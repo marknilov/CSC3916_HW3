@@ -109,7 +109,7 @@ router.get('/Movies', function(req,res){
     Movie.find({},function(err, Movies){
         if(!Movie)
             return res.json({ success: false, message: 'There are no movies in the database'});
-        res.json({ status: 200, message: 'All Movies' });
+        res.json({ success: true, message: 'All Movies' });
 
 });
 });
